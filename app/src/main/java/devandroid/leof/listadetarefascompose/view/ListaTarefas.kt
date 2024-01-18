@@ -3,7 +3,6 @@ package devandroid.leof.listadetarefascompose.view
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
@@ -15,8 +14,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import devandroid.leof.listadetarefascompose.R
-import devandroid.leof.listadetarefascompose.itemlista.TarefaItem
-import devandroid.leof.listadetarefascompose.model.Tarefas
 import devandroid.leof.listadetarefascompose.ui.theme.Black
 import devandroid.leof.listadetarefascompose.ui.theme.Green
 import devandroid.leof.listadetarefascompose.ui.theme.White
@@ -26,7 +23,6 @@ import devandroid.leof.listadetarefascompose.ui.theme.White
 fun ListaTarefas(
     navController: NavController
 ){
-
 
     Scaffold(
         topBar = {
@@ -58,38 +54,13 @@ fun ListaTarefas(
         }
     ) {
 
-        val listaTarefas: MutableList<Tarefas> = mutableListOf(
-            Tarefas(
-                tarefa = "Jogar futebol",
-                descricao = "sdjsdjskdskj",
-                prioridade = 0
-            ),
 
-            Tarefas(
-                tarefa = "Ir ao cinema",
-                descricao = "sdjsdjskdskj",
-                prioridade = 1
-            ),
-
-            Tarefas(
-                tarefa = "Ir a faculdade",
-                descricao = "sdjsdjskdskj",
-                prioridade = 2
-            ),
-
-            Tarefas(
-                tarefa = "Prova",
-                descricao = "sdjsdjskdskj",
-                prioridade = 3
-            )
-        )
         
         LazyColumn{
-            itemsIndexed(listaTarefas){position, _ ->
-                TarefaItem(position, listaTarefas)
+
             }
         }
     }
-}
+
 
 
