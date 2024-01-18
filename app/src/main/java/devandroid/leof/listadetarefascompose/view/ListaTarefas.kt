@@ -23,7 +23,6 @@ import devandroid.leof.listadetarefascompose.ui.theme.White
 fun ListaTarefas(
     navController: NavController
 ){
-
     Scaffold(
         topBar = {
             TopAppBar(
